@@ -1,0 +1,173 @@
+// Файл обнуляющих стилей
+@import "_nullstyle.scss";
+
+// Переменные для блока
+$fz:100px;
+$color_1:#000;
+$color_2:#fff;
+
+// Шаблон №1
+.tplborder {
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+
+@mixin fontz($f, $c, $d) {
+	font-size: $f;
+	max-width: $c;
+	width: $d;
+}
+
+//@include fontz(50px,green); - обращение к миксину
+//@extend .tplborder; - обращение к шаблону
+//.block &{  - этот значок заменяет назавние родительского класса 
+//&:hover{ - этот значок заменяет назавние родительского класса
+//>p - обратиться к параграфу данного уровня
+//width: 300px / 960px *100%; - 31,25% математика. К примеру, конентная часть 960px, а ширина дива - 300px. Вычисляем процент
+
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Light.woff2') format('woff2'),
+        url('../fonts/Geometria-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Medium.woff2') format('woff2'),
+        url('../fonts/Geometria-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azoft Sans';
+    src: url('../fonts/AzoftSans.woff2') format('woff2'),
+        url('../fonts/AzoftSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes rot {
+    0% { transform: rotate( 0deg); }
+   100% { transform: rotate( 360deg); }
+}
+
+
+.checked{
+	background: url('../img/icons/checked.png') no-repeat;
+}
+.cansel{
+	background: url('../img/icons/cancel.png') no-repeat;
+}
+
+
+body {
+	max-width: 1920px;
+	min-height: 1520px;
+	margin: 280px 0px 0px 0px;
+	
+	.content {
+		margin: 0px auto;
+		max-width: 700px;
+		.content-top{
+			font-family: 'Azoft Sans';
+			line-height: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: 700;
+			font-size: 30px;
+			color: #213856;
+			margin: 0px 0px 30px 0px;
+			
+
+		.content-top__title{
+			text-align: center;
+			margin: 0px 0px 30px 0px;
+			text-shadow: 1px 1px 0.1px #213856;
+		};
+		.content-top__button{
+			display: flex;
+			justify-content: center;
+			
+			.button{
+				padding: 17px 30px 17px 30px;
+				text-align: center;
+				background-color: #4d73d0;
+				line-height: 24px;
+				font-size: 16px;
+				color: #ffffff;
+				border-radius: 8px;
+				cursor: pointer;
+
+				&:active{
+					padding: 16px 30px 16px 30px;
+					margin: 1px 1px;
+					font-size: 15px;
+				 }
+				 &:hover {
+					box-shadow: 0px 6px 15px rgba(145, 152, 211, 0.884);
+				}
+			}
+
+
+		};
+		};
+		.content-body{
+		
+		.content-body__list{
+			//border: 1px solid #000;
+			font-family: Geometria;
+			font-size: 16px;
+			line-height: 24px;
+			color: #000000;
+			position: relative;
+			.content-body__item{
+				.content-body__item-text{
+					position: relative;
+					padding: 45px 55px 45px 150px;
+					margin: 10px 0px 0px 0px;
+					background-color: #dfe6fb;
+					background-image: linear-gradient(0.0deg, rgba(217,227,254,0.74) -25%, rgba(255,255,255,0.67) 36%, rgba(255,255,255,0.57) 96%, rgba(232,238,255,0.56) 125%);
+					border-radius: 8px;
+				};
+
+				.well{
+					width: 44px;
+					height: 44px;
+					background: url('../img/icons/wheel.png') no-repeat;
+					display: inline-block;
+					position: absolute;
+					top: 35px;
+					left: 70px;
+
+					
+					
+				}
+				.well__animation{
+					animation: rot 2s;
+					animation-iteration-count: infinite;
+					animation-timing-function: linear;
+				}
+				.cansel{
+					background: url('../img/icons/cancel.png') no-repeat;
+					animation: none;
+				}
+				.checked{
+					background: url('../img/icons/checked.png') no-repeat;
+					animation: none;
+				}
+				
+			}
+			
+			
+		};
+		};
+ }
+}
+

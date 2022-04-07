@@ -1,0 +1,44 @@
+// Файл обнуляющих стилей
+@import "_nullstyle.scss";
+
+// Переменные для блока
+$fz:100px;
+$color_1:#000;
+$color_2:#fff;
+
+// Шаблон №1
+.tplborder {
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+
+@mixin fontz($f, $c, $d) {
+	font-size: $f;
+	max-width: $c;
+	width: $d;
+}
+
+//@include fontz(50px,green); - обращение к миксину
+//@extend .tplborder; - обращение к шаблону
+//.block &{  - этот значок заменяет назавние родительского класса 
+//&:hover{ - этот значок заменяет назавние родительского класса
+//>p - обратиться к параграфу данного уровня
+//width: 300px / 960px *100%; - 31,25% математика. К примеру, конентная часть 960px, а ширина дива - 300px. Вычисляем процент
+
+body {
+
+	.content {
+		
+		text-align: center;
+		font-size: 30px;
+		max-width: 500px;
+		margin: 0px auto;
+		font-weight: 900;
+		.content__item{
+			border: 1px solid #000;
+			margin: 20px;
+			padding: 15px;
+		}
+ }
+}
+
