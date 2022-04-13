@@ -2,6 +2,10 @@
 const button = document.querySelector('.button')
 const items = document.querySelectorAll('.content-body__item')
 const load = document.querySelector('.well_animation')
+  
+
+
+
 
 
 let toggle = false;
@@ -9,6 +13,7 @@ let toggle = false;
 button.addEventListener('click', inClick)
 
 function inClick(){
+
     getToggle();
     let item = 0;
     let arrItems = Array.from(items);
